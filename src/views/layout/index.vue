@@ -11,7 +11,8 @@ export default {
 <template>
   <!-- 顶部通栏组件 -->
   <AppTopNavVue></AppTopNavVue>
-  
+  <!-- 二级路由的出口 -->
+  <router-view></router-view>
   <!-- 底部通栏组件 -->
   <AppFooterVue></AppFooterVue>
 </template>

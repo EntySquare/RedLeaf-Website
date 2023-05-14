@@ -3,11 +3,7 @@
 export default { name: "AppTopnav" }
 </script>
 <template>
-    <nav class="app-topnav">
+    <nav class="app_topnav">
         顶部通栏
     </nav>
 </template>
-
-<style scoped lang="less">
-.app-topnav {}
-</style>

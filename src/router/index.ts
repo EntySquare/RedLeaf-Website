@@ -8,7 +8,13 @@ let router = createRouter({
     // 设置路由对象
     routes: [
         { path: '/', redirect: '/layout' },
-        { path: '/layout', component: layout },
+        {
+            path: '/layout', component: layout,
+            children: [
+                { path: '/layout', redirect: '/layout/home', },
+                { path: 'home', component: () => import('@/views/home/index.vue') },
+            ]
+        },
     ]
 })
 // 暴露路由对象

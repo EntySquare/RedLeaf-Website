@@ -1,11 +1,10 @@
 <script lang="ts" setup name="AppFooter"></script>
 <script lang="ts">
-export default { name: "AppFooter" }
+export default { name: "Homw" }
 </script>
 
 <template>
-    <footer class="app_footer">
-        底部通栏
+    <footer class="home">
+        home
     </footer>
 </template>
-
