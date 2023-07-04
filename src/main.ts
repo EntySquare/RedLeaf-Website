@@ -8,9 +8,12 @@ import '@/assets/styles/common.less'
 import router from './router/index'
 // 导入 pinia
 import { createPinia } from 'pinia'
+// 导入复用组件
+import plugin from "./views/components/index";
 let pinia = createPinia()
 
 createApp(App)
   .use(router)
   .use(pinia)
+  .use(plugin)
   .mount('#app')

@@ -7,12 +7,10 @@ let router = createRouter({
     history: createWebHistory(),
     // 设置路由对象
     routes: [
-        { path: '/', redirect: '/layout' },
         {
-            path: '/layout', component: layout,
+            path: '/', component: layout,
             children: [
-                { path: '/layout', redirect: '/layout/home', },
-                { path: 'home', component: () => import('@/views/home/index.vue') },
+                { path: '', component: () => import('@/views/home/index.vue') },
             ]
         },
     ]
