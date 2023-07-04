@@ -11,7 +11,8 @@ let app_topnav
 let scrollTop = 0
 const scroll = () => {
     app_topnav = document.querySelector('.app_topnav') as HTMLElement
-    const navhight = app_topnav.offsetHeight
+    // const navhight = app_topnav.offsetHeight
+    const navhight = 618
     scrollTop = document.documentElement.scrollTop || document.body.scrollTop
     if (scrollTop > navhight) {
         app_topnav.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
@@ -51,7 +52,7 @@ function tabbar(i: number) {
     left: 0;
     right: 0;
     height: 106px;
-    transition: all .1.5s;
+    transition: all .3s;
     background-color: rgba(0, 0, 0, 0);
 
 
