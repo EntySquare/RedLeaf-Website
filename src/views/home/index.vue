@@ -421,6 +421,7 @@ onUnmounted(() => {
                     width: 712px;
 
                     &-title {
+                        width: 100%;
                         margin-top: 40px;
                         display: flex;
                         align-items: end;
