@@ -145,6 +145,7 @@ onUnmounted(() => {
                 align-items: center;
                 position: relative;
                 transition: all .3s;
+                cursor: pointer;
             }
 
             .menu_body {

@@ -125,6 +125,7 @@ onUnmounted(() => {
             }
 
             &-btn {
+                cursor: pointer;
                 margin-top: 72px;
                 width: 144px;
                 height: 40px;

@@ -457,6 +457,7 @@ onUnmounted(() => {
                     align-items: center;
                     font-size: 14px;
                     font-weight: 400;
+                    cursor: pointer;
                 }
             }
         }
