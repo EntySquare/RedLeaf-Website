@@ -34,19 +34,22 @@ onUnmounted(() => {
     <div class="container">
         <div class="container-header-redleaves">
             <div class="container-header-redleaves-app-bgc">
-                <img src="@/assets/imgs/home_header_logo.png" alt="" width="90.72" height="77.41">
+                <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/home_header_logo.png" alt="" width="90.72"
+                    height="77.41">
             </div>
             <div class="yiwai">
                 <i></i>
                 <div class="container-header-redleaves-heard-title">
                     <div class="container-header-redleaves-heard-title-title">
                         <div class="container-header-redleaves-heard-title-title-item">
-                            <img class="_img" v-for="(i, d) in 3" :src="'src/assets/imgs/Vector' + `${i}` + '.png'"
+                            <img class="_img" v-for="(i, d) in 3"
+                                :src="'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Vector' + `${i}` + '.png'"
                                 :height="viewportWidth < 768 ? (i == 1 || i == 3 ? 57 : 43) : (i == 1 || i == 3 ? 91 : 68)"
                                 alt="">
                         </div>
                         <div class="container-header-redleaves-heard-title-title-item">
-                            <img class="_img" v-for="(i, d) in 6" :src="'src/assets/imgs/Vector' + `${i + 3}` + '.png'"
+                            <img class="_img" v-for="(i, d) in 6"
+                                :src="'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Vector' + `${i + 3}` + '.png'"
                                 :height="viewportWidth < 768 ? (i == 1 ? 57 : 43) : (i == 1 ? 91 : 68)" alt="">
                         </div>
                     </div>
@@ -109,8 +112,10 @@ onUnmounted(() => {
                     justify-content: center;
                     flex-wrap: wrap;
                     gap: 27px;
+                    transition: all 0.5s ease-in-out !important;
 
                     &-item {
+                        transition: all 0.5s ease-in-out !important;
                         display: flex;
                         align-items: end;
                         gap: 12px;

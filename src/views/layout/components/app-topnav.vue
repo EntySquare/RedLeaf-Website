@@ -1,13 +1,17 @@
 <script lang="ts" setup name="AppTopnav">
-import { Transform } from 'stream';
-import { Transition, onUnmounted, ref } from 'vue';
-
+import { onUnmounted, ref } from 'vue';
+import router from '@/router';
 const navList = [
     { name: '首页', path: '/' },
-    { name: '加入我们', path: '/' },
-    { name: '联系我们', path: '/' },
+    { name: '加入我们', path: '/join' },
+    { name: '联系我们', path: '/connection' },
 ]
-const isActive = ref(0)
+const isActive = ref(0) //todo 判断当前路由
+navList.forEach((i, d) => {
+    if (i.path == router.currentRoute.value.path) {
+        isActive.value = d
+    }
+})
 const Active = ref(false)
 let app_topnav
 let scrollTop = 0
@@ -54,18 +58,20 @@ onUnmounted(() => {
             <div class="body">
                 <i></i>
                 <div class="app_tab_bar" v-if="viewportWidth > 768">
-                    <router-link v-for="(i, d) in navList" :key="d" class="app_tab_bar_item" to="/" @click="tabbar(d)">
+                    <router-link v-for="(i, d) in navList" :key="d" class="app_tab_bar_item" :to="i.path"
+                        @click="tabbar(d)">
                         <span :class="[isActive == d ? 'active' : '']">{{ i.name }}</span>
                     </router-link>
                 </div>
                 <div v-else class="menu" @click="Active = !Active" :class="[Active ? 'menu_blue' : '']"
                     :style="{ background: Active ? 'rgba(255, 255, 255, .2)' : 'rgba(255, 255, 255, 0' }">
-                    <img width="30" height="23" src="@/assets/svgs/menu.svg" alt="">
+                    <img width="30" height="23" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/svg/menu.svg"
+                        alt="">
                 </div>
                 <div class="menu_body">
                     <router-link
                         :style="{ Transform: Active ? 'translateX(0px)' : 'translateX(106px)', Transition: Active ? `all .${d + 1}s` : `all .${3 - d + 1}s` }"
-                        v-for="(i, d) in navList" :key="d" class="menu_body_item" to="/" @click="tabbar(d)">
+                        v-for="(i, d) in navList" :key="d" class="menu_body_item" :to="i.path" @click="tabbar(d)">
                         <span :class="[isActive == d ? 'active' : '']">{{ i.name }}</span>
                     </router-link>
                 </div>
