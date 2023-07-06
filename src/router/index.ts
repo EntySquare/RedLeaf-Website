@@ -10,10 +10,13 @@ let router = createRouter({
         {
             path: '/', component: layout,
             children: [
-                { path: '', component: () => import('@/views/home/index.vue') },
+                // { path: '', component: () => import('@/views/home/index.vue') },
+                { path: '', component: () => import('@/views/contact_us/index.vue') },
+
             ]
         },
     ]
 })
 // 暴露路由对象
 export default router
+
