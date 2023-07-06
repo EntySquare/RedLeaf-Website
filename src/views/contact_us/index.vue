@@ -5,6 +5,7 @@ import { onUnmounted, ref } from 'vue';
 //实时监听视口宽度
 const viewportWidth = ref(0) //* 视口宽度
 const Contact_text_l = ref('1232px')
+const Contact_text_r = ref('357px')
 const phone_picture_l = ref('221px')
 const Maple_leaf_image_l = ref('399px')
 // const signinbox_title_PL = ref('362px') //* 私密信息标题左边距
@@ -12,12 +13,14 @@ function handleViewportWidthChange() {
     viewportWidth.value = window.innerWidth; //* 视口宽度赋值
     if (viewportWidth.value < 1920) { //* 如果视口宽度小于1920
         Contact_text_l.value = (1232 - ((1920 - viewportWidth.value) / 1.606779661016949)) + 'px'
+        Contact_text_r.value = (357 - ((1920 - viewportWidth.value) / 2.64804469273743)) + 'px'
         phone_picture_l.value = (221 - ((1920 - viewportWidth.value) / 3.674418604651163)) + 'px'
         Maple_leaf_image_l.value = (399 - ((1920 - viewportWidth.value) / 2.278846153846154)) + 'px'
 
         // signinbox_title_PL.value = (362 - ((1920 - viewportWidth.value) / 4.016949152542373)) + 'px' //* 计算私密信息标题左边距
     } else {
         Contact_text_l.value = '1232px'
+        Contact_text_r.value = '357px'
         phone_picture_l.value = '221px'
         Maple_leaf_image_l.value = '399px'
         // signinbox_title_PL.value = '362px' //* 私密信息标题左边距
@@ -32,12 +35,19 @@ onUnmounted(() => {
 </script>
 <template>
     <div class="contact_us">
+
         <div class="container">
-            <div class="video" style="height: 724px; position: position: fixed;">
-                <Video></Video>
+            <!-- !头部 begin -->
+            <div class="container-header">
+                <div style="position: absolute ; width: 100vw;height: 100vh; ">
+                    <Video></Video>
+                </div>
+                <div style="position: absolute; width: 100vw;height: 100vh;">
+                    <HeaderBd isBtn></HeaderBd>
+                </div>
             </div>
             <div class="my_message">
-                <div class="Contact_text" :style="{ left: Contact_text_l }">
+                <div class="Contact_text" :style="{ right: Contact_text_r }">
                     <div class="Contact_text_title">联系我们</div>
                     <div class="Contact_text_content">
                         提交所有资讯以进行联系
@@ -124,34 +134,35 @@ onUnmounted(() => {
                     <img src="/src/assets/imgs/map.png" alt="">
                 </div>
             </div>
-
-            <div class="Get_in_touch_box">
-                <!-- Maple_leaf_image_l -->
-                <div class="Maple_leaf_image" :style="{ left: Maple_leaf_image_l }">
-                    <img src="/src/assets/imgs/signin_leaf_left.png" alt="">
-                </div>
-                <div class="Get_in_touch_box_right">
-                    <div class="Get_in_touch">
-                        取得联系
+            <div class="Get_in_touch_box_big">
+                <div class="Get_in_touch_box">
+                    <!-- Maple_leaf_image_l -->
+                    <div class="Maple_leaf_image" :style="{ left: Maple_leaf_image_l }">
+                        <img src="/src/assets/imgs/signin_leaf_left.png" alt="">
                     </div>
-                    <div class="connection_us">
-                        联系我们
-                    </div>
-                    <div class="tel_and_mail">
-
-                        <div class="telephone">
-                            <div class="telephone_icon"><img src="/src/assets/svgs/coll.svg" alt="SVG Image"></div>
-                            <div class="telephone_text">电话: 13345678901</div>
+                    <div class="Get_in_touch_box_right">
+                        <div class="Get_in_touch">
+                            取得联系
                         </div>
-                        <div class="mailbox">
-                            <div class="mailbox_icon"><img src="/src/assets/svgs/email.svg" alt="SVG Image"></div>
-                            <div class="mailbox_text">邮箱:1111111111@qq.com</div>
+                        <div class="connection_us">
+                            联系我们
                         </div>
-                    </div>
-                    <div class="address">
-                        <div class="address_icon"><img src="/src/assets/svgs/location.svg" alt="SVG Image"></div>
-                        <div class="address_text">
-                            地址：国家，城市，地区，街道，建筑物名称，大门，楼层，办公室编号。
+                        <div class="tel_and_mail">
+
+                            <div class="telephone">
+                                <div class="telephone_icon"><img src="/src/assets/svgs/coll.svg" alt="SVG Image"></div>
+                                <div class="telephone_text">电话: 13345678901</div>
+                            </div>
+                            <div class="mailbox">
+                                <div class="mailbox_icon"><img src="/src/assets/svgs/email.svg" alt="SVG Image"></div>
+                                <div class="mailbox_text">邮箱:1111111111@qq.com</div>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="address_icon"><img src="/src/assets/svgs/location.svg" alt="SVG Image"></div>
+                            <div class="address_text">
+                                地址：国家，城市，地区，街道，建筑物名称，大门，楼层，办公室编号。
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,6 +179,15 @@ onUnmounted(() => {
     }
 
     .container {
+        margin: 0 auto;
+        position: relative;
+
+        .container-header {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+
+        }
 
         button,
         textarea {
@@ -189,12 +209,18 @@ onUnmounted(() => {
 
         .my_message {
             // !
-            // min-height: 976px;
+            min-height: 976px;
             // background-color: #F7F7F7;
+            margin: 0 auto;
+            max-width: 1920px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
             padding-top: 28px;
 
             .Message_box {
+
                 margin: 0 auto;
                 position: relative;
                 height: 830px;
@@ -294,7 +320,7 @@ onUnmounted(() => {
                 color: #000;
                 position: absolute;
                 top: 365px;
-                left: 1232px;
+                right: 357px;
 
                 .Contact_text_title {
                     font-size: 48px;
@@ -431,126 +457,132 @@ onUnmounted(() => {
 
 
 
-        .Get_in_touch_box {
-            height: 428px;
-            display: flex;
-            padding-top: 16px;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            color: #000;
-            position: relative;
+        .Get_in_touch_box_big {
+            margin: 0 auto;
+            max-width: 1920px;
 
-            .Maple_leaf_image {
-                display: inline-block;
-                width: 197px;
-                height: 201px;
-                position: absolute;
-                left: 399px;
-                top: 16px;
+            .Get_in_touch_box {
+                height: 428px;
+                display: flex;
+                padding-top: 16px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                color: #000;
+                position: relative;
 
-
-                img {
+                .Maple_leaf_image {
                     display: inline-block;
                     width: 197px;
                     height: 201px;
+                    position: absolute;
+                    left: 399px;
+                    top: 16px;
+
+
+                    img {
+                        display: inline-block;
+                        width: 197px;
+                        height: 201px;
+                    }
                 }
-            }
 
-            .Get_in_touch_box_right {
-                display: flex;
-                //更改主轴方向
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                .tel_and_mail,
-                .telephone,
-                .mailbox,
-                .address {
+                .Get_in_touch_box_right {
                     display: flex;
-                }
-
-                .telephone_text,
-                .mailbox_text,
-                .address_text {
-                    font-size: 12px;
-                }
-
-                .Get_in_touch {
-                    font-size: 48px;
-                    font-weight: 800;
-                }
-
-                .connection_us {
-                    font-size: 30px;
-                    margin-top: 14px;
-                    margin-bottom: 30px;
-                }
-
-                .tel_and_mail {
-                    display: flex;
+                    //更改主轴方向
+                    flex-direction: column;
+                    justify-content: center;
                     align-items: center;
-                    margin-bottom: 10px;
 
-                    .telephone {
-                        // align-items: center;
-
-                        .telephone_icon {
-                            margin-right: 6px;
-                            width: 14.24px;
-                            height: 14.239px;
-
-                            img {
-                                vertical-align: top;
-                            }
-                        }
-
-
+                    .tel_and_mail,
+                    .telephone,
+                    .mailbox,
+                    .address {
+                        display: flex;
                     }
 
-                    .mailbox {
-
-                        align-items: center;
-
-                        .mailbox_icon {
-                            margin-left: 9px;
-                            margin-right: 5px;
-
-                            img {
-                                vertical-align: top;
-                            }
-                        }
-
-
-                    }
-                }
-
-                .address {
-                    align-items: start;
-
-                    .address_icon {
-                        img {
-                            vertical-align: top;
-                        }
-                    }
-
+                    .telephone_text,
+                    .mailbox_text,
                     .address_text {
-                        text-align: center;
-                        word-break: break-all;
-                        width: 252px;
-                        width: 250px;
-                        margin: 0;
-                        padding: 0;
-                        line-height: 20px;
+                        font-size: 12px;
                     }
 
+                    .Get_in_touch {
+                        font-size: 48px;
+                        font-weight: 800;
+                    }
+
+                    .connection_us {
+                        font-size: 30px;
+                        margin-top: 14px;
+                        margin-bottom: 30px;
+                    }
+
+                    .tel_and_mail {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        .telephone {
+                            // align-items: center;
+
+                            .telephone_icon {
+                                margin-right: 6px;
+                                width: 14.24px;
+                                height: 14.239px;
+
+                                img {
+                                    vertical-align: top;
+                                }
+                            }
+
+
+                        }
+
+                        .mailbox {
+
+                            align-items: center;
+
+                            .mailbox_icon {
+                                margin-left: 9px;
+                                margin-right: 5px;
+
+                                img {
+                                    vertical-align: top;
+                                }
+                            }
+
+
+                        }
+                    }
+
+                    .address {
+                        align-items: start;
+
+                        .address_icon {
+                            img {
+                                vertical-align: top;
+                            }
+                        }
+
+                        .address_text {
+                            text-align: center;
+                            word-break: break-all;
+                            width: 252px;
+                            width: 250px;
+                            margin: 0;
+                            padding: 0;
+                            line-height: 20px;
+                        }
+
+                    }
                 }
+
+
+
             }
-
-
-
         }
+
 
     }
 
