@@ -46,6 +46,14 @@ onUnmounted(() => {
                     <HeaderBd></HeaderBd>
                 </div>
             </div>
+            <!-- !头部 end -->
+            // * 内容输入框，两个叶子 ， 一段文字 begin
+
+
+            // ?
+            // TODO
+            // &
+            // ~
             <div class="my_message">
                 <div class="Contact_text" :style="{ right: Contact_text_r }">
                     <div class="Contact_text_title">联系我们</div>
@@ -89,8 +97,9 @@ onUnmounted(() => {
                         <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/isolated-autumn-leaves.png" alt="">
                     </div>
                 </div>
-
             </div>
+            // * 内容输入框，两个叶子 ， 一段文字 end
+            // ^
             <div class="Download">
                 <div class="red_leaves">
                     <div class="icon_bg">
@@ -124,8 +133,8 @@ onUnmounted(() => {
                     </div>
                 </div>
                 <!-- phone_picture_l -->
-                <!-- :style="{ marginLeft: phone_picture_l }" -->
-                <div class="phone_picture">
+                <!--  -->
+                <div class="phone_picture" :style="{ marginLeft: phone_picture_l }">
                     <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/coll_phone.png" alt="">
                 </div>
             </div>
@@ -347,7 +356,9 @@ onUnmounted(() => {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            background-color: #CF4241;
+            // background-color: #CF4241;
+            background: url('https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Rectangle_216.png');
+            background-repeat: no-repeat;
 
             .red_leaves {
                 height: 282px;
@@ -444,6 +455,7 @@ onUnmounted(() => {
         }
 
         .map {
+            margin: 0 auto;
             margin-top: 157px;
             padding: 0 140px;
             width: 100%;
