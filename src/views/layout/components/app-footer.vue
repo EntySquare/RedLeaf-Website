@@ -18,10 +18,12 @@
 <style scoped lang='less'>
 .app_footer {
     background: #181818;
-    min-height: 188px;
+    height: 188px;
+    white-space: nowrap;
+    padding: 0 74px;
 
     .container {
-        height: 100%;
+        height: 188px;
         display: flex;
         justify-content: center;
         align-items: center;
