@@ -43,7 +43,7 @@ onUnmounted(() => {
                     <Video></Video>
                 </div>
                 <div style="position: absolute; width: 100vw;height: 100vh;">
-                    <HeaderBd isBtn></HeaderBd>
+                    <HeaderBd></HeaderBd>
                 </div>
             </div>
             <div class="my_message">
@@ -237,13 +237,14 @@ onUnmounted(() => {
                 }
 
                 .Input_field {
-                    position: absolute;
+                    // position: absolute;
                     margin-left: 138px;
                     margin-top: 106px;
                     padding: 74px 38px;
                     width: 609px;
                     height: 609px;
                     background-color: #fff;
+                    background-color: plum;
                     border-radius: 20px;
                     color: #000;
                     font-size: 12px;
@@ -251,10 +252,9 @@ onUnmounted(() => {
 
                     .contact_top {
                         display: flex;
-                        z-index: 1000;
+                        z-index: 100;
                         position: relative;
                         justify-content: space-between;
-                        align-items: center;
 
 
                         .contact_name,

@@ -1,4 +1,4 @@
-//* 联系我们 begin
+// * 联系我们 begin 
 //& <=1384px时 
 @media (max-width:1384px) {
     .my_message {
@@ -21,7 +21,7 @@
         }
 
         .Message_box {
-            width: 768px !important;
+            max-width: 768px !important;
             display: flex !important;
             //更改主轴方向
             flex-direction: column !important;
@@ -101,7 +101,7 @@
 
 }
 
-/* <=890px时 */
+// &  <=1283px时 
 @media (max-width:1283px) {
     .my_message {
         min-height: 1372px !important;
@@ -110,6 +110,55 @@
     .Big_maple_leaf {
         margin-left: -50px !important;
     }
+}
+
+// & <=780px时 
+@media (max-width:780px) {
+    .Contact_text {
+        width: 192px !important;
+        text-align: center !important;
+        word-break: break-all !important;
+
+        .Contact_text_title {
+            margin-bottom: 21px !important;
+        }
+
+    }
+
+    .Message_box {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        width: 351px !important;
+
+        .Input_field {
+            margin-left: 0px !important;
+            width: 313px !important;
+            height: 810px !important;
+
+            .contact_top {
+                flex-direction: column !important;
+
+                .name_input,
+                .email_input {
+                    max-width: 237px !important;
+                    margin: 0 !important;
+
+                }
+            }
+        }
+
+
+    }
+
+    .my_message {
+
+        .Contact_text {
+            margin: 0 !important;
+        }
+    }
+
 }
 
 //* 联系我们 end
