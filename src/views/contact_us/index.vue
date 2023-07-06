@@ -357,7 +357,7 @@ onUnmounted(() => {
             align-items: center;
             justify-content: space-around;
             // background-color: #CF4241;
-            background: url('/src/assets/Rectangle_216.png');
+            background: url('https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Rectangle_216.png');
             background-repeat: no-repeat;
 
             .red_leaves {
