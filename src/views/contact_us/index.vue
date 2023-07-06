@@ -444,6 +444,7 @@ onUnmounted(() => {
         }
 
         .map {
+            margin: 0 auto;
             margin-top: 157px;
             padding: 0 140px;
             width: 100%;
