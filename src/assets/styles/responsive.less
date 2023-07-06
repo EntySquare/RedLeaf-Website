@@ -27,9 +27,12 @@
             flex-direction: column !important;
             align-items: center !important;
 
-            .button {
-                button {
-                    background-color: rgba(0, 0, 0, 0.9) !important;
+            .Input_field {
+
+                .button {
+                    button {
+                        background-color: rgba(0, 0, 0, 0.9) !important;
+                    }
                 }
             }
         }
@@ -55,7 +58,13 @@
 
     .DownLoad_l {
         width: 156px !important;
-        ;
+        margin-left: 25px !important;
+    }
+
+    .icon_bg {
+        margin: 0 !important;
+        margin-bottom: 70px !important;
+
     }
 
     .Download_text_title {
@@ -76,6 +85,7 @@
             min-width: 575px !important;
             height: 817.492px !important;
             overflow: hidden !important;
+            border-radius: 20px !important;
 
             img {
                 min-width: 575px !important;
@@ -87,16 +97,11 @@
     }
 
     .Get_in_touch_box {
-
-
-
         .Maple_leaf_image {
             position: absolute !important;
             margin-top: 65px !important;
             margin-left: 182px !important;
         }
-
-
     }
 
 }
@@ -113,7 +118,7 @@
 }
 
 // & <=780px时 
-@media (max-width:780px) {
+@media (max-width:790px) {
     .Contact_text {
         width: 192px !important;
         text-align: center !important;
@@ -149,13 +154,137 @@
             }
         }
 
+        .button {
 
+            button {
+                background-color: #000 !important;
+            }
+        }
     }
 
     .my_message {
 
         .Contact_text {
             margin: 0 !important;
+        }
+
+        .Message_box {
+            .Big_maple_leaf {
+                // position: static !important;
+                width: 420px !important;
+                height: 164px !important;
+                top: 730px !important;
+                // margin-left: 0 !important;
+            }
+        }
+    }
+
+    .Download {
+        margin: 0px auto !important;
+        //  更换主轴方向
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        // width: 377px !important;
+        height: 1018px !important;
+        padding-top: 80px !important;
+        margin-bottom: 150px !important;
+
+        .red_leaves {
+            // 更改主轴方向
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            // padding-top: 0px !important;
+
+            min-width: 452px !important;
+
+            .DownLoad_l {
+                margin-bottom: 49px !important;
+                flex-direction: column !important;
+
+                align-items: center !important;
+            }
+
+            .icon_bg {
+                margin: 160px 0 70px 0 !important;
+            }
+        }
+
+        .app_store {
+            margin-bottom: 20px !important;
+        }
+
+    }
+
+    .Download_text {
+        margin-right: 0 !important;
+        margin-bottom: 18px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .Download_text_title {
+            margin-bottom: 22px !important;
+
+            img {
+                min-width: 245.773px !important;
+                height: 38.384px !important;
+            }
+        }
+    }
+
+    .phone_picture {
+        margin-bottom: -110px !important;
+
+        img {
+            min-width: 336px !important;
+            height: 529px !important;
+        }
+    }
+
+    .map {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0px auto !important;
+        margin-top: 90px !important;
+
+
+        .map_img {
+            border-radius: 20px !important;
+            min-width: 313px !important;
+            height: 445px !important;
+
+            img {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
+
+    .Get_in_touch_box_big {
+        margin-top: 30px !important;
+
+    }
+
+    .Get_in_touch_box_right {
+        margin-top: 18px !important;
+        z-index: 100 !important;
+
+    }
+
+    .Maple_leaf_image1 {
+        display: inline-block !important;
+        width: 197px !important;
+        height: 201px !important;
+        position: absolute !important;
+        right: 0px !important;
+        bottom: 259px !important;
+
+
+        img {
+            display: inline-block !important;
+            width: 197px !important;
+            height: 201px !important;
         }
     }
 

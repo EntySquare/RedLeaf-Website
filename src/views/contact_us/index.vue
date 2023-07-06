@@ -55,7 +55,8 @@ onUnmounted(() => {
                 </div>
                 <div class="Message_box">
                     <div class="Little_maple_leaf">
-                        <img class="" src="/src/assets/imgs/isolated-autumn-leaves1.png" alt="">
+                        <img class="" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/isolated-autumn-leaves1.png"
+                            alt="">
                     </div>
                     <div class="Input_field">
                         <div class="contact_top">
@@ -85,7 +86,7 @@ onUnmounted(() => {
                         </div>
                     </div>
                     <div class="Big_maple_leaf">
-                        <img src="/src/assets/imgs/isolated-autumn-leaves.png" alt="">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/isolated-autumn-leaves.png" alt="">
                     </div>
                 </div>
 
@@ -94,19 +95,18 @@ onUnmounted(() => {
                 <div class="red_leaves">
                     <div class="icon_bg">
                         <div class="centered-image">
-                            <img src="/src/assets/imgs/icon_bg.png" alt="">
+                            <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/icon_bg.png" alt="">
                         </div>
                         <div class="icon">
                             <!-- home_header_logo -->
-                            <img src="/src/assets/imgs/home_header_logo.png" alt="">
+                            <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/home_header_logo.png" alt="">
                         </div>
                     </div>
-
                     <div class="DownLoad_l" :style="{ flexDirection: viewportWidth <= 1554 ? 'column' : 'row' }">
                         <div class="Download_text">
                             <div class="Download_text_title">
                                 <!-- 1384px -->
-                                <img :src="viewportWidth <= 1384 ? '/src/assets/imgs/Group_Download1.png' : '/src/assets/imgs/Group_Download.png'"
+                                <img :src="viewportWidth <= 1384 && viewportWidth > 790 ? 'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Group_Download1.png' : 'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Group_Download.png'"
                                     alt="">
                             </div>
                             <div class="Download_text_content">
@@ -115,10 +115,10 @@ onUnmounted(() => {
                         </div>
                         <div class="DownLoad_right" :style="{ marginBottom: viewportWidth <= 1554 ? '0' : '18' }">
                             <div class="app_store">
-                                <img src="/src/assets/imgs/app_store.png" alt="">
+                                <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/app_store.png" alt="">
                             </div>
                             <div class="google_play">
-                                <img src="/src/assets/imgs/google_play.png" alt="">
+                                <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/google_play.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -126,19 +126,19 @@ onUnmounted(() => {
                 <!-- phone_picture_l -->
                 <!-- :style="{ marginLeft: phone_picture_l }" -->
                 <div class="phone_picture">
-                    <img src="/src/assets/imgs/coll_phone.png" alt="">
+                    <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/coll_phone.png" alt="">
                 </div>
             </div>
             <div class="map">
                 <div class="map_img">
-                    <img src="/src/assets/imgs/map.png" alt="">
+                    <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/map.png" alt="">
                 </div>
             </div>
             <div class="Get_in_touch_box_big">
                 <div class="Get_in_touch_box">
                     <!-- Maple_leaf_image_l -->
-                    <div class="Maple_leaf_image" :style="{ left: Maple_leaf_image_l }">
-                        <img src="/src/assets/imgs/signin_leaf_left.png" alt="">
+                    <div class="Maple_leaf_image" v-if="viewportWidth > 790" :style="{ left: Maple_leaf_image_l }">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/signin_leaf_left.png" alt="">
                     </div>
                     <div class="Get_in_touch_box_right">
                         <div class="Get_in_touch">
@@ -150,20 +150,29 @@ onUnmounted(() => {
                         <div class="tel_and_mail">
 
                             <div class="telephone">
-                                <div class="telephone_icon"><img src="/src/assets/svgs/coll.svg" alt="SVG Image"></div>
+                                <div class="telephone_icon"><img
+                                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/svg/coll.svg"
+                                        alt="SVG Image"></div>
                                 <div class="telephone_text">电话: 13345678901</div>
                             </div>
                             <div class="mailbox">
-                                <div class="mailbox_icon"><img src="/src/assets/svgs/email.svg" alt="SVG Image"></div>
+                                <div class="mailbox_icon"><img
+                                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/svg/email.svg"
+                                        alt="SVG Image"></div>
                                 <div class="mailbox_text">邮箱:1111111111@qq.com</div>
                             </div>
                         </div>
                         <div class="address">
-                            <div class="address_icon"><img src="/src/assets/svgs/location.svg" alt="SVG Image"></div>
+                            <div class="address_icon"><img
+                                    src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/svg/location.svg"
+                                    alt="SVG Image"></div>
                             <div class="address_text">
                                 地址：国家，城市，地区，街道，建筑物名称，大门，楼层，办公室编号。
                             </div>
                         </div>
+                    </div>
+                    <div class="Maple_leaf_image1" v-if="viewportWidth <= 790">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/signin_leaf_left.png" alt="">
                     </div>
                 </div>
             </div>
@@ -173,6 +182,7 @@ onUnmounted(() => {
 </template>
 <style scoped lang='less'>
 .contact_us {
+
     img {
         vertical-align: bottom;
 
@@ -186,7 +196,6 @@ onUnmounted(() => {
             height: 100vh;
             width: 100vw;
             position: relative;
-
         }
 
         button,
@@ -220,7 +229,6 @@ onUnmounted(() => {
             padding-top: 28px;
 
             .Message_box {
-
                 margin: 0 auto;
                 position: relative;
                 height: 830px;
@@ -353,7 +361,6 @@ onUnmounted(() => {
             .icon_bg {
                 width: 131px;
                 height: 131px;
-
                 margin-right: 29px;
                 display: flex;
                 justify-content: center;
@@ -440,11 +447,11 @@ onUnmounted(() => {
         .map {
             margin-top: 157px;
             padding: 0 140px;
-            width: 100% !important;
-            height: 100% !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .map_img {
 
@@ -581,6 +588,8 @@ onUnmounted(() => {
 
 
             }
+
+
         }
 
 
