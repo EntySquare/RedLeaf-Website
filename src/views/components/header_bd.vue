@@ -6,6 +6,10 @@ const props = defineProps({
     isBtn: {
         type: Boolean,
         default: false
+    },
+    title: {
+        type: String,
+        default: '加入我们'
     }
 });
 function download() {
@@ -61,6 +65,9 @@ onUnmounted(() => {
             </div>
             <div class="container-header-redleaves-btn" :style="{ opacity: isBtn ? 1 : 0 }" @click="download">
                 下载红叶
+            </div>
+            <div class="container-header-redleaves-link" :style="{ opacity: !isBtn ? 1 : 0 }">
+                首页&nbsp;/&nbsp;<span>{{ title }}</span>
             </div>
         </div>
     </div>
@@ -143,6 +150,23 @@ onUnmounted(() => {
                 font-size: 14px;
                 font-weight: 400;
                 white-space: nowrap;
+            }
+
+            &-link {
+                position: absolute;
+                bottom: 82px;
+                left: 50%;
+                transform: translateX(-50%);
+                line-height: 20px;
+                font-weight: 600;
+                display: flex;
+                cursor: pointer;
+
+                span {
+                    font-size: 14px;
+                    border-bottom: 1px solid #fff;
+                    padding-bottom: 2px;
+                }
             }
         }
     }
