@@ -157,7 +157,6 @@ onUnmounted(() => {
                             联系我们
                         </div>
                         <div class="tel_and_mail">
-
                             <div class="telephone">
                                 <div class="telephone_icon"><img
                                         src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/svg/coll.svg"
@@ -275,7 +274,7 @@ onUnmounted(() => {
 
                         .contact_name,
                         .contact_email {
-                            width: 260px;
+                            max-width: 260px;
                         }
 
                     }
@@ -324,11 +323,17 @@ onUnmounted(() => {
 
             .Big_maple_leaf {
                 z-index: 1;
-                width: 858px;
+                max-width: 858px;
                 height: 335px;
                 position: absolute;
                 right: 0px;
                 bottom: 0px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
 
             }
 
@@ -359,6 +364,7 @@ onUnmounted(() => {
             // background-color: #CF4241;
             background: url('https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Rectangle_216.png');
             background-repeat: no-repeat;
+            background-size: cover;
 
             .red_leaves {
                 height: 282px;
@@ -463,6 +469,7 @@ onUnmounted(() => {
             display: flex;
             justify-content: center;
             align-items: center;
+            // background-color: plum;
 
             .map_img {
 

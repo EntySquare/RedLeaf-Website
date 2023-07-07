@@ -16,8 +16,10 @@
         }
 
         .Big_maple_leaf {
+            width: 100% !important;
             top: 570px !important;
             left: 0 !important;
+            overflow: auto !important;
         }
 
         .Message_box {
@@ -113,7 +115,7 @@
     }
 
     .Big_maple_leaf {
-        margin-left: -50px !important;
+        margin-left: 10px !important;
     }
 }
 
@@ -131,6 +133,7 @@
     }
 
     .Message_box {
+        overflow: hidden !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -139,7 +142,7 @@
 
         .Input_field {
             margin-left: 0px !important;
-            width: 313px !important;
+            max-width: 313px !important;
             height: 810px !important;
 
             .contact_top {
@@ -163,7 +166,6 @@
     }
 
     .my_message {
-
         .Contact_text {
             margin: 0 !important;
         }
@@ -171,10 +173,18 @@
         .Message_box {
             .Big_maple_leaf {
                 // position: static !important;
-                width: 420px !important;
+                max-width: 100% !important;
                 height: 164px !important;
+                overflow: hidden !important;
                 top: 730px !important;
-                // margin-left: 0 !important;
+                margin: 0 auto; // margin-left: 0 !important;
+
+                img {
+                    margin: 0 auto;
+                    max-width: 100% !important;
+                    height: 100% !important;
+
+                }
             }
         }
     }
@@ -188,9 +198,11 @@
         height: 1018px !important;
         padding-top: 80px !important;
         margin-bottom: 150px !important;
+        overflow: hidden !important;
         background: url('https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Rectangle_2231.png') !important;
         background-repeat: no-repeat !important;
         background-position: center !important;
+        background-size: cover !important;
 
         .red_leaves {
             // 更改主轴方向
@@ -247,8 +259,9 @@
     }
 
     .map {
-        width: 100% !important;
-        height: 100% !important;
+
+        max-width: 313px !important;
+        height: 445px !important;
         margin: 0px auto !important;
         margin-top: 90px !important;
 
