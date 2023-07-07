@@ -61,37 +61,41 @@ onUnmounted(() => {
             <div class="container_signinbox">
                 <div class="container_signinbox_group">
                     <div class="container_signinbox_group_item">
-                        <img src="@/assets/imgs/xin.png" alt="" height="60" width="71">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/xin.png" alt="" height="60" width="71">
                         <span>聚焦真是的社交需求</span>
                     </div>
                     <i v-if="viewportWidth > 1348"></i>
                     <i v-if="viewportWidth < 1348 && viewportWidth > 768"></i>
                     <i class="i2" v-if="viewportWidth < 768"></i>
                     <div class="container_signinbox_group_item">
-                        <img src="@/assets/imgs/xinbang.png" alt="" height="71.19" width="71.39">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/xinbang.png" alt="" height="71.19"
+                            width="71.39">
                         <span>提供个性化社交体验</span>
                     </div>
                     <i v-if="viewportWidth > 1348"></i>
                     <i class="i2" v-if="viewportWidth < 768"></i>
                     <div class="container_signinbox_group_item">
-                        <img src="@/assets/imgs/duoyuan.png" alt="" height="62" width="62">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/duoyuan.png" alt="" height="62"
+                            width="62">
                         <span>探索多元化社交可能</span>
                     </div>
                     <i v-if="viewportWidth > 1348"></i>
                     <i v-if="viewportWidth < 1348 && viewportWidth > 768"></i>
                     <i class="i2" v-if="viewportWidth < 768"></i>
                     <div class="container_signinbox_group_item">
-                        <img src="@/assets/imgs/bajiaoxin.png" alt="" height="69.66" width="69.66">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/bajiaoxin.png" alt="" height="69.66"
+                            width="69.66">
                         <span>建立可信赖社交安全</span>
                     </div>
                 </div>
                 <hr>
                 <div class="container_signinbox_title_bgc" :style="{ paddingLeft: signinbox_title_PL }">
                     <img class="leftleaf" :style="{ left: viewportWidth > 768 ? signinbox_leaf_PL : '' }"
-                        src="@/assets/imgs/signin_leaf_left.png" alt="">
+                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/signin_leaf_left.png" alt="">
                     <img class="rightleaf" :style="{ right: viewportWidth > 768 ? signinbox_leaf_PR : '' }"
-                        src="@/assets/imgs/signin_leaf_right.png" alt="">
-                    <img class="phone" :style="{ right: signinbox_Phone }" src="@/assets/imgs/phone.png" alt="">
+                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/signin_leaf_right.png" alt="">
+                    <img class="phone" :style="{ right: signinbox_Phone }"
+                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/phone.png" alt="">
                     <div class="container_signinbox_title_bgc_textone"><span>注册快捷</span><span
                             v-if="viewportWidth > 768">，</span><span>安全隐私</span>
                     </div>
@@ -103,12 +107,14 @@ onUnmounted(() => {
             <!-- !私聊 begin -->
             <div class="container_dmsgbox">
                 <div class="dmsg_top">
-                    <img class="dmsg_top_l" src="@/assets/imgs/dmsg_top.png">
-                    <img class="dmsg_top_r" src="@/assets/imgs/dmsg_top.png">
+                    <img class="dmsg_top_l" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/dmsg_top.png">
+                    <img class="dmsg_top_r" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/dmsg_top.png">
                 </div>
                 <div class="dmsg_body" :style="{ paddingRight: dmsg_title_PL }">
-                    <img class="dmsg_phone" :style="{ left: dmsg_phone_L }" src="@/assets/imgs/dmsg_phone.png">
-                    <img class="dmsg_leaf" :style="{ left: dmsgbox_leaf_PL }" src="@/assets/imgs/dmsg_leaf_left.png">
+                    <img class="dmsg_phone" :style="{ left: dmsg_phone_L }"
+                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/dmsg_phone.png">
+                    <img class="dmsg_leaf" :style="{ left: dmsgbox_leaf_PL }"
+                        src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/dmsg_leaf_left.png">
                     <div class="text">
                         <div class="container_dmsgbox_textone"><span>私聊群聊</span><span
                                 v-if="viewportWidth > 768">，</span><span>随心畅聊</span></div>
@@ -120,14 +126,15 @@ onUnmounted(() => {
             <!-- !人群 begin -->
             <div class="container_people">
                 <div class="people_bgc">
-                    <img class="people_img" src="@/assets/imgs/finally_bgc.png">
-                    <img class="people_img" src="@/assets/imgs/finally_bgc.png">
-                    <img class="people_img" src="@/assets/imgs/finally_bgc.png">
+                    <img class="people_img" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/finally_bgc.png">
+                    <img class="people_img" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/finally_bgc.png">
+                    <img class="people_img" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/finally_bgc.png">
                 </div>
                 <i class="people_bgc_color"> </i>
                 <div class="container_people-redleaves">
                     <div class="container_people-redleaves-app-bgc">
-                        <img src="@/assets/imgs/home_header_logo.png" alt="" width="90.72" height="77.41">
+                        <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/home_header_logo.png" alt=""
+                            width="90.72" height="77.41">
                     </div>
                     <div class="yiwai">
                         <div class="container_people-redleaves-heard-title">
@@ -260,6 +267,8 @@ onUnmounted(() => {
                     object-fit: contain;
                     right: 240px;
                     bottom: 15px;
+                    transition: all 0.5s ease-in-out !important;
+
                 }
 
                 .leftleaf {
@@ -268,6 +277,8 @@ onUnmounted(() => {
                     width: 197px;
                     height: 201px;
                     top: 31px;
+                    transition: all 0.5s ease-in-out !important;
+
                 }
 
                 .rightleaf {
@@ -276,6 +287,8 @@ onUnmounted(() => {
                     width: 261px;
                     height: 263px;
                     bottom: 0;
+                    transition: all 0.5s ease-in-out !important;
+
                 }
             }
         }
@@ -295,6 +308,8 @@ onUnmounted(() => {
 
                 .dmsg_top_l,
                 .dmsg_top_r {
+                    transition: all 0.5s ease-in-out !important;
+
                     height: 562px;
                     min-width: 1920px;
                 }
@@ -318,14 +333,18 @@ onUnmounted(() => {
                 align-items: end;
 
                 .dmsg_phone {
+
                     max-width: 1108px;
                     max-height: 720px;
                     object-fit: contain;
                     position: absolute;
                     bottom: 0;
+                    transition: all 0.5s ease-in-out !important;
                 }
 
                 .dmsg_leaf {
+                    transition: all 0.5s ease-in-out !important;
+
                     max-width: 224px;
                     max-height: 227px;
                     object-fit: contain;

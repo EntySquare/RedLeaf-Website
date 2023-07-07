@@ -22,14 +22,14 @@ onUnmounted(() => {
 </script>
 <template>
     <div class="my_video">
-        <img class="bgcimg" src="@/assets/imgs/nnn.jpeg" alt="video">
+        <img class="bgcimg" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/nnn.jpeg" alt="video">
         <video muted playsinline autoplay loop>
-            <source src="@/assets/imgs/nnn.mp4" type="video/mp4">
+            <source src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/nnn.mp4" type="video/mp4">
         </video>
         <div class="video_bgc">
             <div class="body">
                 <div class="nav_logo" :style="{ left: logo_L }">
-                    <img class="_img" src="@/assets/imgs/nav_logo.png" alt="logo" />
+                    <img class="_img" src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/nav_logo.png" alt="logo" />
                 </div>
             </div>
         </div>
@@ -67,12 +67,14 @@ onUnmounted(() => {
         top: 0;
         background: rgba(216, 61, 61, 0.8);
 
+
         .body {
             position: relative;
             max-width: 1600px;
             margin: 0 auto;
 
             .nav_logo {
+                transition: all 0.5s ease-in-out !important;
                 position: absolute;
                 height: 160px;
                 width: 145px;
@@ -84,6 +86,7 @@ onUnmounted(() => {
                 align-items: center;
 
                 ._img {
+                    transition: all 0.5s ease-in-out !important;
                     height: 93.9px;
                     width: 66.73px;
                 }

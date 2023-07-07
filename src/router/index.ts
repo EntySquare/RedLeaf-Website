@@ -10,9 +10,9 @@ let router = createRouter({
         {
             path: '/', component: layout,
             children: [
-                // { path: '', component: () => import('@/views/home/index.vue') },
-                { path: '', component: () => import('@/views/contact_us/index.vue') },
-
+                { path: '', component: () => import('@/views/home/index.vue') },
+                { path: 'join', component: () => import('@/views/joinus/index.vue') },
+                { path: 'connection', component: () => import('@/views/contact_us/index.vue') },
             ]
         },
     ]

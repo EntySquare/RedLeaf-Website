@@ -4,7 +4,7 @@
         <div class="container">
             <div class="container_body">
                 <div class="container_body_left">
-                    <img src="@/assets/imgs/footer_logo.png" alt="">
+                    <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/footer_logo.png" alt="">
                     <span>2023 红叶|保留所有权利</span>
                 </div>
                 <div class="container_body_right">
