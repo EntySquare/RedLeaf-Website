@@ -209,10 +209,9 @@ onUnmounted(() => {
         textarea {
             outline: none;
             background: #f7f7f7;
-            line-height: 38px;
             height: 42px;
             width: 100%;
-            padding-left: 24px;
+            padding: 15px 15px 0 15px;
             border-radius: 10px;
             margin-top: 9px;
             margin-bottom: 16px;
