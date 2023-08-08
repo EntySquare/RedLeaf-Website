@@ -62,7 +62,7 @@ onUnmounted(() => {
                 <div class="container_signinbox_group">
                     <div class="container_signinbox_group_item">
                         <img src="https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/xin.png" alt="" height="60" width="71">
-                        <span>聚焦真是的社交需求</span>
+                        <span>聚焦真实的社交需求</span>
                     </div>
                     <i v-if="viewportWidth > 1348"></i>
                     <i v-if="viewportWidth < 1348 && viewportWidth > 768"></i>
@@ -139,34 +139,66 @@ onUnmounted(() => {
                     <div class="yiwai">
                         <div class="container_people-redleaves-heard-title">
                             <div v-if="viewportWidth > 768" class="container_people-redleaves-heard-title-title">
-                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                    text2list[d] }}</span>
-                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                    text2list[4 + d] }}</span>
-                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3">{{
-                                    text2list[8 + d] }}</span>
+                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                    :key="d">{{
+                                        text2list[d] }}</span>
+                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                    :key="d">{{
+                                        text2list[4 + d] }}</span>
+                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3"
+                                    :key="d">{{
+                                        text2list[8 + d] }}</span>
                             </div>
                             <div v-else class="container_people-redleaves-heard-title-title">
                                 <div>
-                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                        text2list[d] }}</span>
+                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                        :key="d">{{
+                                            text2list[d] }}</span>
                                 </div>
                                 <div>
-                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                        text2list[4 + d] }}</span>
+                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                        :key="d">{{
+                                            text2list[4 + d] }}</span>
                                 </div>
                                 <div>
-                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3">{{
-                                        text2list[8 + d] }}</span>
+                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3"
+                                        :key="d">{{
+                                            text2list[8 + d] }}</span>
                                 </div>
                             </div>
                             <div class="container_people-redleaves-text">
-                                <span v-for="(i, d) in textlist">{{ i }}</span>
+                                <span v-for="(i, d) in textlist" :key="d">{{ i }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="container_people-redleaves-btn">
-                        下载红叶
+                    <div class="btn_box">
+                        <a href="https://redleaves.s3.ap-east-1.amazonaws.com/RedLeaves-setup.dmg"
+                            rel="noopener noreferrer">
+                            <div class="container_people-redleaves-btn">
+                                <img src="@/assets/mac.svg" alt="" srcset="">
+                                Mac
+                            </div>
+                        </a>
+                        <a href="https://redleaves.s3.ap-east-1.amazonaws.com/RedLeaves+Setup.exe"
+                            rel="noopener noreferrer">
+                            <div class="container_people-redleaves-btn">
+                                <img src="@/assets/windows.svg" alt="" srcset="">
+                                Windows
+                            </div>
+                        </a>
+                        <a href="https://testflight.apple.com/join/tWR2VHsn" rel="noopener noreferrer" target="_blank">
+                            <div class="container_people-redleaves-btn">
+                                <img src="@/assets/mac.svg" alt="" srcset="">
+                                Ios
+                            </div>
+                        </a>
+                        <a href="https://redleaves.s3.ap-east-1.amazonaws.com/redleaves.apk" rel="noopener noreferrer">
+                            <div class="container_people-redleaves-btn">
+                                <img src="@/assets/android.svg" alt="" srcset="">
+                                Android
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -465,18 +497,33 @@ onUnmounted(() => {
                     justify-content: space-between;
                 }
 
-                &-btn {
+                .btn_box {
                     margin-top: 72px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                }
+
+                &-btn {
+                    cursor: pointer;
                     width: 144px;
                     height: 40px;
+                    color: white;
+                    border: 2px solid #fff;
                     border-radius: 18px;
-                    background-color: rgba(0, 0, 0, 0.7);
+                    background-color: rgba(255, 255, 255, 0.2);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     font-size: 14px;
                     font-weight: 400;
-                    cursor: pointer;
+                    white-space: nowrap;
+                    display: flex;
+                    gap: 5px;
+
+                    img {
+                        width: 20px;
+                    }
                 }
             }
         }

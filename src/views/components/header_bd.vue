@@ -45,23 +45,26 @@ onUnmounted(() => {
                             <img class="_img" v-for="(i, d) in 3"
                                 :src="'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Vector' + `${i}` + '.png'"
                                 :height="viewportWidth < 768 ? (i == 1 || i == 3 ? 57 : 43) : (i == 1 || i == 3 ? 91 : 68)"
-                                alt="">
+                                alt="" :key="d">
                         </div>
                         <div class="container-header-redleaves-heard-title-title-item">
                             <img class="_img" v-for="(i, d) in 6"
                                 :src="'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Vector' + `${i + 3}` + '.png'"
-                                :height="viewportWidth < 768 ? (i == 1 ? 57 : 43) : (i == 1 ? 91 : 68)" alt="">
+                                :height="viewportWidth < 768 ? (i == 1 ? 57 : 43) : (i == 1 ? 91 : 68)" alt="" :key="d">
                         </div>
                     </div>
                     <div class="container-header-redleaves-text">
-                        <span v-for="(i, d) in textlist">{{ i }}</span>
+                        <span v-for="(i, d) in textlist" :key="d">{{ i }}</span>
                     </div>
                 </div>
                 <i></i>
             </div>
-            <div class="container-header-redleaves-btn" :style="{ opacity: isBtn ? 1 : 0 }" @click="download">
-                下载红叶
-            </div>
+            <a href="https://web.redleaves.asia/?updated=unknown#/welcome" target="_blank" rel="noopener noreferrer"
+                style="color: white;">
+                <div class="container-header-redleaves-btn" :style="{ opacity: isBtn ? 1 : 0 }" @click="download">
+                    Try It On
+                </div>
+            </a>
         </div>
     </div>
 </template>
