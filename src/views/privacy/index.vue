@@ -73,7 +73,6 @@ export default {
 <template>
     <div class="privacy">
         <div class="container">
-
             <div class="body">
                 <div class="content_body">
                     <div v-for="(item, index) in privacy" :key="index">
@@ -93,6 +92,7 @@ export default {
 </template>
 <style scoped lang='less'>
 .container {
+    background-color: black;
     margin: 0 auto;
     position: relative;
 
@@ -105,7 +105,7 @@ export default {
 }
 
 .privacy {
-    background-color: black;
+
     color: black;
     position: relative;
     min-height: 100vh;
