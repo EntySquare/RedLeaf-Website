@@ -13,6 +13,7 @@ let router = createRouter({
                 { path: '', component: () => import('@/views/home/index.vue') },
                 { path: 'join', component: () => import('@/views/joinus/index.vue') },
                 { path: 'connection', component: () => import('@/views/contact_us/index.vue') },
+                { path: 'privacy', component: () => import('@/views/privacy/index.vue') },
             ]
         },
     ]

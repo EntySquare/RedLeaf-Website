@@ -139,29 +139,35 @@ onUnmounted(() => {
                     <div class="yiwai">
                         <div class="container_people-redleaves-heard-title">
                             <div v-if="viewportWidth > 768" class="container_people-redleaves-heard-title-title">
-                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                    text2list[d] }}</span>
-                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                    text2list[4 + d] }}</span>
-                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3">{{
-                                    text2list[8 + d] }}</span>
+                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                    :key="d">{{
+                                        text2list[d] }}</span>
+                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                    :key="d">{{
+                                        text2list[4 + d] }}</span>
+                                <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3"
+                                    :key="d">{{
+                                        text2list[8 + d] }}</span>
                             </div>
                             <div v-else class="container_people-redleaves-heard-title-title">
                                 <div>
-                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                        text2list[d] }}</span>
+                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                        :key="d">{{
+                                            text2list[d] }}</span>
                                 </div>
                                 <div>
-                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4">{{
-                                        text2list[4 + d] }}</span>
+                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 4"
+                                        :key="d">{{
+                                            text2list[4 + d] }}</span>
                                 </div>
                                 <div>
-                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3">{{
-                                        text2list[8 + d] }}</span>
+                                    <span class="container_people-redleaves-heard-title-title-item" v-for="(i, d) in 3"
+                                        :key="d">{{
+                                            text2list[8 + d] }}</span>
                                 </div>
                             </div>
                             <div class="container_people-redleaves-text">
-                                <span v-for="(i, d) in textlist">{{ i }}</span>
+                                <span v-for="(i, d) in textlist" :key="d">{{ i }}</span>
                             </div>
                         </div>
                     </div>
@@ -490,5 +496,4 @@ onUnmounted(() => {
         background: #E0E0E0;
         margin: 0;
     }
-}
-</style>
+}</style>

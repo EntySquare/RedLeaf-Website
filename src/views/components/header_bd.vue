@@ -46,19 +46,19 @@ onUnmounted(() => {
                 <div class="container-header-redleaves-heard-title">
                     <div class="container-header-redleaves-heard-title-title">
                         <div class="container-header-redleaves-heard-title-title-item">
-                            <img class="_img" v-for="(i, d) in 3"
+                            <img class="_img" v-for="(i, d) in 3" :key="d"
                                 :src="'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Vector' + `${i}` + '.png'"
                                 :height="viewportWidth < 768 ? (i == 1 || i == 3 ? 57 : 43) : (i == 1 || i == 3 ? 91 : 68)"
                                 alt="">
                         </div>
                         <div class="container-header-redleaves-heard-title-title-item">
-                            <img class="_img" v-for="(i, d) in 6"
+                            <img class="_img" v-for="(i, d) in 6" :key="d"
                                 :src="'https://redleaves-ety.oss-cn-shenzhen.aliyuncs.com/Vector' + `${i + 3}` + '.png'"
                                 :height="viewportWidth < 768 ? (i == 1 ? 57 : 43) : (i == 1 ? 91 : 68)" alt="">
                         </div>
                     </div>
                     <div class="container-header-redleaves-text">
-                        <span v-for="(i, d) in textlist">{{ i }}</span>
+                        <span v-for="(i, d) in textlist" :key="d">{{ i }}</span>
                     </div>
                 </div>
                 <i></i>

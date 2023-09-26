@@ -1,10 +1,11 @@
-<script lang="ts" setup name="AppTopnav">
+<script  setup lang="ts"  name="AppTopnav">
 import { onUnmounted, ref } from 'vue';
 import router from '@/router';
 const navList = [
     { name: '首页', path: '/' },
     { name: '加入我们', path: '/join' },
     { name: '联系我们', path: '/connection' },
+    { name: '隐私协议', path: '/privacy' }
 ]
 const isActive = ref(0) //todo 判断当前路由
 navList.forEach((i, d) => {
@@ -51,6 +52,7 @@ onUnmounted(() => {
     window.removeEventListener('scroll', scroll)
 })
 </script>
+
 <template>
     <nav class="app_topnav">
         <div class="poop" v-show="Active" @click="Active = false"></div>
@@ -71,7 +73,8 @@ onUnmounted(() => {
                 <div class="menu_body">
                     <router-link
                         :style="{ Transform: Active ? 'translateX(0px)' : 'translateX(106px)', Transition: Active ? `all .${d + 1}s` : `all .${3 - d + 1}s` }"
-                        v-for="(i, d) in navList" :key="d" class="menu_body_item" :to="i.path" @click="tabbar(d)">
+                        v-for="(i, d) in navList" :key="d" :class="[isActive === 3 ? 'items' : 'menu_body_item']"
+                        :to="i.path" @click="tabbar(d)">
                         <span :class="[isActive == d ? 'active' : '']">{{ i.name }}</span>
                     </router-link>
                 </div>
@@ -175,6 +178,20 @@ onUnmounted(() => {
                     line-height: 106px;
                     text-align: center;
                     background: rgba(255, 255, 255, .2);
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(10px);
+                }
+
+                .items {
+                    border-top: .5px solid rgba(146, 146, 146, 0.5);
+                    transition: all .3s;
+                    transform: translateX(106px);
+                    color: black;
+                    height: 106px;
+                    width: 106px;
+                    line-height: 106px;
+                    text-align: center;
+                    background: rgba(7, 7, 7, 0.2);
                     -webkit-backdrop-filter: blur(10px);
                     backdrop-filter: blur(10px);
                 }
