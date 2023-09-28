@@ -59,7 +59,7 @@ const privacy = [
     },
     {
         format: 'footer',
-        content: '编写时间：2023年06月26日'
+        content: '编写时间：2023年09月26日'
     },
 
 
@@ -111,7 +111,7 @@ export default {
     min-height: 100vh;
 
     .body {
-        top: 100px;
+        top: 108px;
         position: relative;
         width: 100%;
         background-color: white;
